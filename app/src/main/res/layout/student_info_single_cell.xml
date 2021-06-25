@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <data>
+        <variable
+            name="studentInfo"
+            type="com.example.bindingdata.pojo.StudentModel" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentPadding="8dp"
+        android:layout_margin="3dp"
+        app:cardCornerRadius="40dp"
+        app:cardElevation="9dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/studentNameLabel"
+                android:text="student name :"
+                android:textSize="18sp"
+                android:textColor="#6F6F6F"
+                android:layout_alignParentTop="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/studentAgeLabel"
+                android:text="student age :"
+                android:textSize="18sp"
+                android:textColor="#6F6F6F"
+                android:layout_marginTop="4dp"
+                android:layout_below="@id/studentNameLabel"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/studentClassLabel"
+                android:text="student class :"
+                android:textSize="18sp"
+                android:textColor="#6F6F6F"
+                android:layout_marginTop="4dp"
+                android:layout_below="@id/studentAgeLabel"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/studentEmailLabel"
+                android:text="student email:"
+                android:textSize="18sp"
+                android:textColor="#6F6F6F"
+                android:layout_marginTop="4dp"
+                android:layout_below="@id/studentClassLabel"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/studentName"
+                android:text="@{studentInfo.studentName}"
+                android:textSize="18sp"
+                android:layout_marginLeft="18dp"
+                android:textColor="#3F51B5"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/studentNameLabel"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/studentAge"
+                android:text="@{studentInfo.studentAge}"
+                android:textSize="18sp"
+                android:layout_marginLeft="18dp"
+                android:textColor="#3F51B5"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/studentAgeLabel"
+                android:layout_below="@id/studentName"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/studentClass"
+                android:text="@{studentInfo.studentClass}"
+                android:textSize="18sp"
+                android:layout_marginLeft="18dp"
+                android:textColor="#3F51B5"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/studentClassLabel"
+                android:layout_below="@id/studentAge"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/studentEmail"
+                android:text="@{studentInfo.studentEmail}"
+                android:textSize="18sp"
+
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/studentEmailLabel"
+                android:layout_marginLeft="18dp"
+                android:textColor="#3F51B5"
+                android:layout_below="@id/studentClass"
+                />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

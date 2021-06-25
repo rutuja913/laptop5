@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <data>
+        <variable
+            name="position"
+            type="int" />
+        <variable
+            name="agentProfile"
+            type="com.example.bindingdata.pojo.AgentInfoModel" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentPadding="8dp"
+        android:layout_margin="3dp"
+        app:cardCornerRadius="40dp"
+        app:cardElevation="9dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/deliveryTimeSlotStart"
+                android:text="deliveryTimeSlotStart :"
+                android:textSize="18sp"
+                android:textColor="#6F6F6F"
+                android:layout_alignParentTop="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/deliveryTimeSlotEnd"
+                android:text="deliveryTimeSlotEnd :"
+                android:textSize="18sp"
+                android:textColor="#6F6F6F"
+                android:layout_marginTop="4dp"
+                android:layout_below="@id/deliveryTimeSlotStart"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/deliveryTimeSlotId"
+                android:text="deliveryTimeSlotId :"
+                android:textSize="18sp"
+                android:textColor="#6F6F6F"
+                android:layout_marginTop="4dp"
+                android:layout_below="@id/deliveryTimeSlotEnd"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/deliveryTimeSlotName"
+                android:text="deliveryTimeSlotName:"
+                android:textSize="18sp"
+                android:textColor="#6F6F6F"
+                android:layout_marginTop="4dp"
+                android:layout_below="@id/deliveryTimeSlotId"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/shopDetailsId"
+                android:text="shopDetailsId:"
+                android:textSize="18sp"
+                android:textColor="#6F6F6F"
+                android:layout_marginTop="4dp"
+                android:layout_below="@id/deliveryTimeSlotName"
+                />
+
+
+
+
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/deliveryTimeSlotStartinfo"
+                android:text="@{agentProfile.deliveryTimeSlotStart+` `}"
+                android:textSize="18sp"
+                android:layout_marginLeft="18dp"
+                android:textColor="#3F51B5"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/deliveryTimeSlotStart"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/deliveryTimeSlotEndinfo"
+                android:text="@{agentProfile.deliveryTimeSlotEnd+` `}"
+                android:textSize="18sp"
+                android:layout_marginLeft="18dp"
+                android:textColor="#3F51B5"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/deliveryTimeSlotEnd"
+                android:layout_below="@id/deliveryTimeSlotStartinfo"
+                />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/deliveryTimeSlotIdinfo"
+                android:text="@{agentProfile.deliveryTimeSlotId+` `}"
+                android:textSize="18sp"
+                android:layout_marginLeft="18dp"
+                android:textColor="#3F51B5"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/deliveryTimeSlotId"
+                android:layout_below="@id/deliveryTimeSlotEndinfo"
+                />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/deliveryTimeSlotNameinfo"
+                android:text="@{agentProfile.deliveryTimeSlotName+` `}"
+                android:textSize="18sp"
+                android:layout_marginLeft="18dp"
+                android:textColor="#3F51B5"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/deliveryTimeSlotName"
+                android:layout_below="@id/deliveryTimeSlotIdinfo"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/shopDetailsIdinfo"
+                android:text="@{agentProfile.shopDetailsId+` `}"
+                android:textSize="18sp"
+                android:layout_marginLeft="18dp"
+                android:textColor="#3F51B5"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/shopDetailsId"
+                android:layout_below="@id/deliveryTimeSlotNameinfo"
+                />
+
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

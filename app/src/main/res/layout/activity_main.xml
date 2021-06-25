@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="callBack"
+            type="com.example.bindingdata.MainActivity" />
+        <variable
+            name="studentInfo"
+            type="com.example.bindingdata.pojo.StudentModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/studentName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{studentInfo.studentName,default=`testing`}"
+            android:textColor="#2196F3"
+            android:textSize="36sp"
+            android:layout_marginVertical="5dp"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/studentAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{studentInfo.studentAge}"
+            android:textColor="#2196F3"
+            android:textSize="36sp"
+            android:layout_marginVertical="5dp"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/studentClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{studentInfo.studentClass}"
+            android:textColor="#2196F3"
+            android:textSize="36sp"
+            android:layout_marginVertical="5dp"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/studentEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{studentInfo.studentEmail}"
+            android:textColor="#2196F3"
+            android:textSize="36sp"
+            android:layout_marginVertical="5dp"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:text="go to student list"
+            android:textAllCaps="true"
+            android:id="@+id/btn1"
+            android:onClick="@{() -> callBack.onGoToStudentsClicked()}"
+            />
+    </LinearLayout>
+
+</layout>
